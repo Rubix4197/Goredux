@@ -1,3 +1,23 @@
+// Check if unlockAchievement is already defined as a function
+if (typeof unlockAchievement !== 'function') {
+    // Store achievements that have already been unlocked
+    window.unlockedAchievements = new Set();
+
+    // Define the unlockAchievement function
+    window.unlockAchievement = function(achievementName) {
+        // Check if this achievement has already been unlocked
+        if (!window.unlockedAchievements.has(achievementName)) {
+            // Show the achievement popup
+            alert("Unlocked Achievement: " + achievementName);
+            
+            // Add this achievement to the set to mark it as unlocked
+            window.unlockedAchievements.add(achievementName);
+        } else {
+            // Optional: Do something if the achievement is already unlocked
+            console.log("Achievement '" + achievementName + "' has already been unlocked.");
+        }
+    };
+}
 campaignTrail_temp.questions_json = [
     {
         "model": "campaign_trail.question",
@@ -5501,7 +5521,7 @@ campaignTrail_temp.candidate_state_multiplier_json = [
         "fields": {
             "candidate": 201,
             "state": 185,
-            "state_multiplier": 0.975
+            "state_multiplier": 1.06
         }
     },
     {
@@ -5510,7 +5530,7 @@ campaignTrail_temp.candidate_state_multiplier_json = [
         "fields": {
             "candidate": 201,
             "state": 186,
-            "state_multiplier": 0.9625
+            "state_multiplier": 0.925
         }
     },
     {
@@ -5519,7 +5539,7 @@ campaignTrail_temp.candidate_state_multiplier_json = [
         "fields": {
             "candidate": 201,
             "state": 187,
-            "state_multiplier": 0.975
+            "state_multiplier": 1.13
         }
     },
     {
@@ -5528,7 +5548,7 @@ campaignTrail_temp.candidate_state_multiplier_json = [
         "fields": {
             "candidate": 201,
             "state": 188,
-            "state_multiplier": 0.985
+            "state_multiplier": 1.15
         }
     },
     {
@@ -5555,7 +5575,7 @@ campaignTrail_temp.candidate_state_multiplier_json = [
         "fields": {
             "candidate": 201,
             "state": 191,
-            "state_multiplier": 0.9625
+            "state_multiplier": 1.15
         }
     },
     {
@@ -5564,7 +5584,7 @@ campaignTrail_temp.candidate_state_multiplier_json = [
         "fields": {
             "candidate": 201,
             "state": 192,
-            "state_multiplier": 0.925
+            "state_multiplier": 0.825
         }
     },
     {
@@ -5573,7 +5593,7 @@ campaignTrail_temp.candidate_state_multiplier_json = [
         "fields": {
             "candidate": 201,
             "state": 193,
-            "state_multiplier": 0.999
+            "state_multiplier": 1.1
         }
     },
     {
@@ -5600,7 +5620,7 @@ campaignTrail_temp.candidate_state_multiplier_json = [
         "fields": {
             "candidate": 201,
             "state": 196,
-            "state_multiplier": 0.975
+            "state_multiplier": 0.935
         }
     },
     {
@@ -5609,7 +5629,7 @@ campaignTrail_temp.candidate_state_multiplier_json = [
         "fields": {
             "candidate": 201,
             "state": 197,
-            "state_multiplier": 0.999
+            "state_multiplier": 0.95
         }
     },
     {
@@ -5636,7 +5656,7 @@ campaignTrail_temp.candidate_state_multiplier_json = [
         "fields": {
             "candidate": 201,
             "state": 200,
-            "state_multiplier": 0.985
+            "state_multiplier": 1.15
         }
     },
     {
@@ -5654,7 +5674,7 @@ campaignTrail_temp.candidate_state_multiplier_json = [
         "fields": {
             "candidate": 201,
             "state": 202,
-            "state_multiplier": 0.999
+            "state_multiplier": 1.05
         }
     },
     {
@@ -5690,7 +5710,7 @@ campaignTrail_temp.candidate_state_multiplier_json = [
         "fields": {
             "candidate": 201,
             "state": 206,
-            "state_multiplier": 0.9625
+            "state_multiplier": 0.85
         }
     },
     {
@@ -5699,7 +5719,7 @@ campaignTrail_temp.candidate_state_multiplier_json = [
         "fields": {
             "candidate": 201,
             "state": 207,
-            "state_multiplier": 0.975
+            "state_multiplier": 0.905
         }
     },
     {
@@ -5726,7 +5746,7 @@ campaignTrail_temp.candidate_state_multiplier_json = [
         "fields": {
             "candidate": 201,
             "state": 210,
-            "state_multiplier": 0.985
+            "state_multiplier": 1.15
         }
     },
     {
@@ -5735,7 +5755,7 @@ campaignTrail_temp.candidate_state_multiplier_json = [
         "fields": {
             "candidate": 201,
             "state": 211,
-            "state_multiplier": 0.975
+            "state_multiplier": 0.995
         }
     },
     {
@@ -5744,7 +5764,7 @@ campaignTrail_temp.candidate_state_multiplier_json = [
         "fields": {
             "candidate": 201,
             "state": 212,
-            "state_multiplier": 0.975
+            "state_multiplier": 1.15
         }
     },
     {
@@ -5762,7 +5782,7 @@ campaignTrail_temp.candidate_state_multiplier_json = [
         "fields": {
             "candidate": 201,
             "state": 214,
-            "state_multiplier": 0.975
+            "state_multiplier": 0.915
         }
     },
     {
@@ -5780,7 +5800,7 @@ campaignTrail_temp.candidate_state_multiplier_json = [
         "fields": {
             "candidate": 201,
             "state": 216,
-            "state_multiplier": 1
+            "state_multiplier": 0.95
         }
     },
     {
@@ -5825,7 +5845,7 @@ campaignTrail_temp.candidate_state_multiplier_json = [
         "fields": {
             "candidate": 201,
             "state": 221,
-            "state_multiplier": 1
+            "state_multiplier": 0.95
         }
     },
     {
@@ -5852,7 +5872,7 @@ campaignTrail_temp.candidate_state_multiplier_json = [
         "fields": {
             "candidate": 201,
             "state": 224,
-            "state_multiplier": 0.875
+            "state_multiplier": 0.825
         }
     },
     {
@@ -5861,7 +5881,7 @@ campaignTrail_temp.candidate_state_multiplier_json = [
         "fields": {
             "candidate": 201,
             "state": 225,
-            "state_multiplier": 0.9625
+            "state_multiplier": 1.05
         }
     },
     {
@@ -5888,7 +5908,7 @@ campaignTrail_temp.candidate_state_multiplier_json = [
         "fields": {
             "candidate": 201,
             "state": 228,
-            "state_multiplier": 0.9625
+            "state_multiplier": 1.4
         }
     },
     {
@@ -5915,7 +5935,7 @@ campaignTrail_temp.candidate_state_multiplier_json = [
         "fields": {
             "candidate": 201,
             "state": 231,
-            "state_multiplier": 0.925
+            "state_multiplier": 0.855
         }
     },
     {
@@ -12505,6 +12525,8 @@ changeCandidateMargins = (candidate, boost) => {
   
       campaignTrail_temp.floridaflip = true;
       ctsAchievement("Equanimity");
+      unlockAchievement("Equanimity")
+
     // Find state 228 results
     const state228 = campaignTrail_temp.final_state_results.find(x => x.state == 228);
     if (state228) {
@@ -12542,13 +12564,18 @@ changeCandidateMargins = (candidate, boost) => {
   let dixieStates = [184, 229, 222, 205];
   if (stcount(dixieStates, 201)) {
    ctsAchievement("Dixiecratic Dream");
+   unlockAchievement("Dixiecratic Dream")
+
   }
   if ((campaignTrail_temp.player_answers.includes(5260) || campaignTrail_temp.player_answers.includes(5259)) && (campaignTrail_temp.player_answers.includes(5247) || campaignTrail_temp.player_answers.includes(5248)) && (campaignTrail_temp.player_answers.includes(21171) || campaignTrail_temp.player_answers.includes(21172)) && (quickstats[0] > 270)) {
     ctsAchievement("No Jack Kennedy");
+    unlockAchievement("No Jack Kennedy")
+
   }
   if (![5173, 5177, 5122, 5248, 5263, 20683, 21108, 21139, 21142, 21143, 21144, 5220, 5204, 5153, 5157, 5155, 5139]
     .some(id => campaignTrail_temp.player_answers.includes(id)) && (quickstats[0] > 270)) {
   ctsAchievement("My Own Man");
+  unlockAchievement("My Own Man")
 }
 if ((quickstats[0] > 270) &&
     campaignTrail_temp.player_answers.includes(21158) &&
@@ -12566,6 +12593,8 @@ if ((quickstats[0] > 270) &&
     [21144, 21143, 21142].some(id => campaignTrail_temp.player_answers.includes(id))
   ) {
     ctsAchievement("Third Termer");
+    unlockAchievement("Third Termer")
+
   }
   
   if (handleFloridaFlip(e)) {
@@ -12584,7 +12613,7 @@ if ((quickstats[0] > 270) &&
     return `<div style="max-height: 270px; overflow-y: auto;"><h3>I've seen America in this campaign, and I like what I see. It's worth fighting for and that's a fight I'll never stop.</h3><p>It was a fight of titanic proportions, this election, but the results are in. You’ve lost, and not by so little that it feels any better. However, you’ve outperformed any losing Democrat since, well, ever. Given how this campaign initially looked, it’s perhaps consolation enough that you managed to make it this close of a race. Bush saunters onto the stage, and after a nice enough message about the beauty of Democracy, you see his outlined message for his term as President. Education reform, tax relief, social security reform, you hear from the President-elect. You suppose it could be worse, but it’s still compassionate conservatism ascendant.</p>${hasPlurality ? `<p>Worst of all, though, is the fact that you still managed to win the popular vote. Bush will have been elected, mandateless, and while that may hurt him come 2004, it moreso stings to know that while America stood behind you, you won’t be leading her.</p>` : ""}<p>Looking ahead to 2004, the Democratic Party's rising stars appear to be in full swing, with young Senator Edwards, as well as Senator Lieberman and Governor Dean seeking to make a national name for themselves. John Kerry seems primed to take a shot at it, and in the earliest of early polls he’s got something of a lead. Perhaps he can be the one to challenge Bush?</p><p>As for you? Well, the Inconvenient Truth of Climate Change isn’t going anywhere–even with a Texan occupying the White House. The Democratic Party still holds you in high regard, and it’s likely you’ll keep some sway over it going into the future, perhaps being able to push for a more environmentally ambitious Democrat to occupy the White House. Either way, America thanks you for your decades of service, and looks forward to what may come next.</p></div>`;
        } else if (quickstats[0] >= 230 && quickstats[0] < 269) {
     return `<div style="max-height: 270px; overflow-y: auto;"><h3>I know that many of my supporters are disappointed. I am too. But our disappointment must be overcome by our love of country.</h3><p>The race is over–and you’ve lost. However, to many, this is more than they could have ever expected. From an expected pounding at the ballot box to a nailbiter race, many are patting themselves on the backs for this race to have even been this close in the first place. After a gentlemanly call, Bush strides on stage and delivers his victory speech–clearly later in the night than he ever planned for it to be. Among his platitudes you hear a tone of moderation that he hadn’t espoused on the campaign trail–perhaps a good sign for what the Bush administration will look like?</p>${hasPlurality ? `<p>Worst of all, though, is the fact that you still managed to win the popular vote. Bush will have been elected, mandateless, and while that may hurt him come 2004, it moreso stings to know that while America stood behind you, you won’t be leading her. Democrats are up in arms, but it’s unlikely they’ll get anything of substance done on that front.</p>` : ""}${hascongress ? `<p>Surprisingly, Democrats have managed to take back the House–which should help neuter much of Bush’s agenda. Hopefully, Social Security should remain mostly untouched and the progress your administration has made on the national debt kept largely intact.</p>` : ""}<p>Looking ahead to 2004, the Democratic Party's rising stars appear to be in full swing, with young Senator Edwards, as well as Senator Lieberman and Governor Dean seeking to make a national name for themselves. John Kerry seems primed to take a shot at it, and in the earliest of early polls he’s got a distinct lead. In the whispers of the base though, you hear your own name as well–however unlikely it is you actually make a bid.</p><p>As for you? Well, the Inconvenient Truth of Climate Change isn’t going anywhere–even with a Texan occupying the White House. The Democratic Party reveres you for your service and your herculean effort on this campaign, and it’s likely your endorsement will have some powerful sway going into the future. Either way, America thanks you for your decades of service, and looks forward to what may come next.</p></div>`;
-      } else if (quickstats[0] == 269 && quickstats[1] == 269) {
+      } else if (quickstats[0] == 269) {
     return `<div style="max-height: 270px; overflow-y: auto;"><h3>History gives us many examples of contests as hotly debated, as fiercely fought, with their own challenges to the popular will.</h3><p>How terrible–a deadlock. There are recounts sure to be abound in almost every swing state to try and get a clear winner, but if the results stand then America is heading into uncharted waters. Not since 1824 has there been a deadlock, but the winner this time will not need any corrupt bargains. The GOP has an outright majority of state delegations and it’s unlikely you can chip the needed amount away.</p><p>Cynically, many within your party are congratulating you on even making it this close, given the blowout many expected the election to be when you started your campaign. For more reasons than one, this election is sure to be carefully studied for decades, to figure out just how you managed to pull this off.</p>${hasPlurality ? `<p>Despite your popular vote win–which has caused some outcry among national Democrats, it seems that Bush will come into the Oval Office, of course with a massively neutered agenda. For 2004, the party seems poised to return you to the nomination at a moment's notice–if you wish to have it, that is.</p></div>` : ""}`;
        } else if (quickstats[0] >= 270 && quickstats[0] < 294) {
     return `<div style="max-height: 270px; overflow-y: auto;"> <h3>Now I want to lead America because I love America.</h3><p>You’ve done it. After a harrowing night and a barrage of close calls, you’ve been elected President of the United States of America. It seemed almost impossible given how much of a media darling Bush was, how tired of Clinton America was, and all that was thrown at you along your journey here. It looked so dismal at first, but you’ve pulled up an upset for the ages. Bush gives you a concession call, and as you stride out onto stage, you hear the cheers of an elated crowd.</p><p>${wonsenate ? `It appears that you’ll narrowly control a tied Senate thanks to upset wins in a handful of close races. This will serve as a boon to your agenda, but with the House narrowly in GOP hands, you’ll still face some roadblocks. However, your more moderate plans for deficit reduction and education reform seem on track for success.` : hascongress ? `Surprisingly, due to your heavy investment in downballot races, the Democrats will preside over a tied Senate and narrowly control the House of Representatives. While neither of the margins are comfortable, this should allow you to take on your more dramatic plans for universal healthcare and climate action.` : `You’ll face a Senate where you’re down by one seat, with the House having held its narrow majority for the GOP, a blow to your agenda, but not a crippling one. You’ll likely be able to get some legislation passed, but doubtfully a ratification of Kyoto or anything more dramatic—although congress seems very amenable to keeping these surpluses in order and your plan to end the debt by 2012. Hopefully the midterms reverse this, but that usually doesn’t go too well for incumbent Presidents.`}</p>${!hasPlurality ? `<p>You’ve lost the popular vote though, in a stinging rebuke of your prerogative as President-elect. The GOP is up in arms about this, but their calls to abolish the electoral college are likely to be ignored… for now. What’s more worrying is how this may impact your term as President.</p>` : ""}<p>Four terms for any party is difficult–but you’re not radically unpopular and, despite the narrow margin of victory, McCain or Huckabee or whoever your GOP challenger is will still have an uphill fight to unseat you in 2004. Just make sure to keep the economy good at home and peace abroad, and you should be on track to keeping your Presidency. Congratulations, you’ve earned this, Mr. President.</div>`;
