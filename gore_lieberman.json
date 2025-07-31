@@ -11304,7 +11304,7 @@ campaignTrail_temp.answer_feedback_json = [
         "pk": 20684,
         "fields": {
             "answer": 20683,
-            "candidate": 200,
+            "candidate": 201,
             "answer_feedback": "What a speech! Defying expectations you have earnestly endorsed the legacy of Bill Clinton and relied on his economic legacy as President as a key motivator for your campaign. While embracing him with have its positives and negatives, the Clinton base seems to have more vigor than you possibly could have predicted."
         }
     },
@@ -11376,7 +11376,7 @@ campaignTrail_temp.answer_feedback_json = [
         "pk": 20698,
         "fields": {
             "answer": 5190,
-            "candidate": 200,
+            "candidate": 201,
             "answer_feedback": "Attacking a third party as a spoiler is a tradition as old as time, and for the few voters it will convince it seems a rather nasty argument to use for someone best known for advocating for seatbelts."
         }
     },
